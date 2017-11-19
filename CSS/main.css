@@ -152,7 +152,7 @@ nav li:hover {
 
 .addcart-button {
   margin-top: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   font-size: 25px;
   height: 5%;
 }
@@ -171,6 +171,10 @@ nav li:hover {
     .products {
       grid-template-columns: 1fr 1fr;
     }
+
+    .extra-info {
+      width: 47.5%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -180,5 +184,6 @@ nav li:hover {
     }
     .extra-info {
       width: 100%;
+      position: static;
     }
 }
