@@ -113,6 +113,8 @@ nav li:hover {
   color: black;
   position: absolute;
   background-color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+
 }
 
 .border {
@@ -164,6 +166,13 @@ nav li:hover {
     transition: .3s;
 }
 
+@media only screen and (max-width: 1200px) {
+    /* For tablets: */
+    .products {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .products {
@@ -171,6 +180,5 @@ nav li:hover {
     }
     .extra-info {
       width: 100%;
-      position: static;
     }
 }
