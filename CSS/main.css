@@ -15,6 +15,7 @@ nav {
   position: fixed;
   z-index: 10;
   width: 100%;
+  border-bottom: 1px solid #404040;
 }
 
 .right-buttons {
@@ -39,8 +40,61 @@ nav li:hover {
   color: white;
 }
 
+.menu {
+  width: 100%;
+  padding-top: 60px;
+  background-color: #333333;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  display: none;
+}
+
+#menu-button {
+  cursor: pointer;
+}
+
+.pressed {
+  background-color: #333333;
+  color: white;
+}
+
+
+.menu-container {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.menu ul {
+  display: inline-block;
+  list-style: none;
+  width: 30%;
+  padding-right: 20px;
+}
+
+.menu li {
+  text-align: right;
+  font-size: 18px;
+  padding-bottom: 6px;
+}
+
+.menu li:first-child {
+  color: #4C9CF7;
+  font-weight: 550;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 .content {
   padding-top: 70px;
+  margin-bottom: 50px;
+}
+
+.move-up {
+  padding-top: 20px;
+  transition: 0.8s;
 }
 
 .content h1 {
@@ -53,9 +107,13 @@ nav li:hover {
   margin: 0 auto;
   position: relative;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5%;
   grid-row-gap: 40px;
+  -ms-grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-column-gap: 5%;
+  -ms-grid-row-gap: 40px;
 }
 
 
@@ -139,15 +197,23 @@ nav li:hover {
   min-width: 18%;
   min-width: 14%;
   height: 30px;
-  background-color: #404040;
-  color: #4C9CF7;
-  font-weight: 550;
+  border: 2px solid black;
+  font-weight: 500;
   font-size: 24px;
   text-align: center;
+  cursor: pointer;
 }
 
 .extra-info li:hover {
+  /*border: 2px solid #404040;
+  color: #4C9CF7;*/
+  opacity: 0.3;
+}
+
+.extra-info li.active {
+  background-color: black;
   color: white;
+  opacity: 1;
 }
 
 .addcart-button {
@@ -155,6 +221,13 @@ nav li:hover {
   padding-bottom: 8px;
   font-size: 25px;
   height: 5%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .rotate {
@@ -170,6 +243,7 @@ nav li:hover {
     /* For tablets: */
     .products {
       grid-template-columns: 1fr 1fr;
+      -ms-grid-template-columns: 1fr 1fr;
     }
 
     .extra-info {
@@ -181,6 +255,7 @@ nav li:hover {
     /* For mobile phones: */
     .products {
         grid-template-columns: 1fr;
+        -ms-grid-template-columns: 1fr;
     }
     .extra-info {
       width: 100%;

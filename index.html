@@ -13,11 +13,31 @@
           <ul>
             <li id="home-button">Home<i class="fa fa-home"></i></li>
             <div class="right-buttons">
-              <li>Menu</li>
+              <li id="menu-button">Menu</li>
               <li id="icon"><i class="fa fa-shopping-bag"></i></li>
             </div>
           </ul>
     </nav>
+
+    <div class="menu hide">
+      <div class="menu-container">
+        <ul class="left">
+          <li>Clothes</li>
+          <li>Men's clothes</li>
+          <li>Women's clothes</li>
+        </ul>
+        <ul class="left">
+          <li>Shoes</li>
+          <li>Men's shoes</li>
+          <li>Women's shoes</li>
+        </ul>
+        <ul class="right">
+          <li>Contact</li>
+          <li>Facebook <i class="fa fa-facebook-square" style="color:white"></i></li>
+          <li>Instagram <i class="fa fa-instagram" style="color:white"></i></li>
+        </ul>
+      </div>
+    </div>
 
     <div class="content">
       <h1>Popular products</h1>
@@ -28,7 +48,7 @@
               <img class="product-image" src="Images/sneaker1.jpg" alt="Picture of sneaker">
               <h2 id="name-product">Sneaker</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">€79.99</p>
+              <p id="price">&euro;79.99</p>
             </div>
             </a>
             <div class="extra-info">
@@ -43,7 +63,7 @@
                   <li>XL</li>
                 </ul>
               </div>
-              <div class="addcart-button">
+              <div class="addcart-button disabled">
                 Add to cart <i class="fa fa-shopping-bag"></i>
               </div>
             </div>
@@ -54,7 +74,7 @@
               <img class="product-image" src="Images/hoodie.jpeg">
               <h2 id="name-product">Sweater</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">€24.99</p>
+              <p id="price">&euro;24.99</p>
             </div>
             </a>
             <div class="extra-info">
@@ -69,7 +89,7 @@
                   <li>XL</li>
                 </ul>
               </div>
-              <div class="addcart-button">
+              <div class="addcart-button disabled">
                 Add to cart <i class="fa fa-shopping-bag"></i>
               </div>
             </div>
@@ -80,7 +100,7 @@
               <img class="product-image" src="Images/sweatpants.jpg">
               <h2 id="name-product">Sweatpants</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">€34.99</p>
+              <p id="price">&euro;34.99</p>
           </div>
           </a>
           <div class="extra-info">
@@ -95,13 +115,14 @@
                 <li>XL</li>
               </ul>
             </div>
-            <div class="addcart-button">
+            <div class="addcart-button disabled">
               Add to cart <i class="fa fa-shopping-bag"></i>
             </div>
           </div>
         </div>
       </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src='js/main.js'></script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='js/main.js'></script>
   </body>
 </html>
