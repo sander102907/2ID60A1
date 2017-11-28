@@ -11,31 +11,37 @@
   <body>
       <nav>
           <ul>
-            <li id="home-button">Home<i class="fa fa-home"></i></li>
+            <li id="home-button"><span id="button-text">Home </span><i class="fa fa-home" style="font-size:26px;"></i></li>
             <div class="right-buttons">
-              <li id="menu-button">Menu</li>
-              <li id="icon"><i class="fa fa-shopping-bag"></i></li>
+              <li id="menu-button"><span id="button-text">Menu</span> <i class="fa fa-bars phone"></i></li>
+              <li id="icon"><i class="fa fa-shopping-bag"><div class="counter">0</div></i></li>
             </div>
           </ul>
     </nav>
 
     <div class="menu hide">
       <div class="menu-container">
-        <ul class="left">
-          <li>Clothes</li>
-          <li>Men's clothes</li>
-          <li>Women's clothes</li>
-        </ul>
-        <ul class="left">
-          <li>Shoes</li>
-          <li>Men's shoes</li>
-          <li>Women's shoes</li>
-        </ul>
-        <ul class="right">
-          <li>Contact</li>
-          <li>Facebook <i class="fa fa-facebook-square" style="color:white"></i></li>
-          <li>Instagram <i class="fa fa-instagram" style="color:white"></i></li>
-        </ul>
+        <div>
+          <ul class="left">
+            <li>Clothes</li>
+            <li>Men's clothes</li>
+            <li>Women's clothes</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="left">
+            <li>Shoes</li>
+            <li>Men's shoes</li>
+            <li>Women's shoes</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="right">
+            <li>Contact</li>
+            <li>Facebook <i class="fa fa-facebook-square" style="color:white"></i></li>
+            <li>Instagram <i class="fa fa-instagram" style="color:white"></i></li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -46,7 +52,7 @@
             <a href="#">
             <div class="information">
               <img class="product-image" src="Images/sneaker1.jpg" alt="Picture of sneaker">
-              <h2 id="name-product">Sneaker</h2>
+              <h2 id="name-product">Sneakers</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
               <p id="price">&euro;79.99</p>
             </div>
@@ -55,13 +61,26 @@
               <div class="border">
                 <p>size</p>
               </div>
-              <div class="size-buttons">
-                <ul>
-                  <li>S</li>
-                  <li>M</li>
-                  <li>L</li>
-                  <li>XL</li>
-                </ul>
+              <div class="dropdown-size-container">
+                <div class="dropdown-size">
+                  <div class="current-size">
+                    select size
+                  </div>
+                  <div class="size-arrow"><i class="material-icons" style="font-size: 28px;">keyboard_arrow_down</i></div>
+                  <div class="sizes hide">
+                    <ul>
+                      <li>38 EU</li>
+                      <li>39 EU</li>
+                      <li>40 EU</li>
+                      <li>41 EU</li>
+                      <li>42 EU</li>
+                      <li>43 EU</li>
+                      <li>44 EU</li>
+                      <li>45 EU</li>
+                      <li>46 EU</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="addcart-button disabled">
                 Add to cart <i class="fa fa-shopping-bag"></i>
@@ -122,6 +141,10 @@
         </div>
       </div>
     </div>
+
+    <footer>
+
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='js/main.js'></script>
   </body>

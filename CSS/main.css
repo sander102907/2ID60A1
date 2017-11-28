@@ -40,12 +40,31 @@ nav li:hover {
   color: white;
 }
 
+.counter {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 14px;
+  top: 30px;
+  font-size: 15px;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
 .menu {
   width: 100%;
   padding-top: 60px;
   background-color: #333333;
   color: white;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .hide {
@@ -61,16 +80,8 @@ nav li:hover {
   color: white;
 }
 
-
-.menu-container {
-  margin-left: auto;
-  margin-right: 0;
-}
-
 .menu ul {
-  display: inline-block;
   list-style: none;
-  width: 30%;
   padding-right: 20px;
 }
 
@@ -78,6 +89,7 @@ nav li:hover {
   text-align: right;
   font-size: 18px;
   padding-bottom: 6px;
+  padding-top: 3px;
 }
 
 .menu li:first-child {
@@ -89,7 +101,12 @@ nav li:hover {
 
 .content {
   padding-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
+}
+
+.content h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .move-up {
@@ -97,23 +114,18 @@ nav li:hover {
   transition: 0.8s;
 }
 
-.content h1 {
-  text-align: center;
-  margin-bottom: 2%;
-}
-
 .products {
   width: 85%;
   margin: 0 auto;
   position: relative;
-  display: grid;
   display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  -ms-grid-gap: 5%;
+  -ms-grid-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5%;
   grid-row-gap: 40px;
-  -ms-grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-column-gap: 5%;
-  -ms-grid-row-gap: 40px;
 }
 
 
@@ -217,17 +229,24 @@ nav li:hover {
 }
 
 .addcart-button {
-  margin-top: 8px;
+  width: 90%;
+  margin: 0px auto;
   padding-bottom: 8px;
   font-size: 25px;
   height: 5%;
   opacity: 1;
   cursor: pointer;
+  z-index: 1;
+  padding-top: 8px;
 }
 
 .disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.sizes-on {
+  display: none;
 }
 
 .rotate {
@@ -238,6 +257,55 @@ nav li:hover {
     transform: rotate(0deg);
     transition: .3s;
 }
+
+.dropdown-size-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.dropdown-size {
+  width: 100%;
+  margin: 8px auto;
+  border: 1px solid black;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.5);
+  text-align: left;
+  text-indent: 10px;
+  font-weight: 400;
+  font-size: 22px;
+  height: 30px
+}
+
+.current-size {
+  display: inline-block;
+}
+
+.size-arrow {
+  display: inline-block;
+  width: 12%;
+  height: 100%;
+  float: right;
+  border-left: 1px solid black;
+  text-indent: 0px;
+  text-align: center;
+}
+
+.sizes {
+  border: 1px solid black;
+  background-color: white;
+  margin-top: 10px;
+  height: 80px;
+  overflow-y: scroll;
+  z-index: 20;
+}
+
+.sizes li {
+  display: block;
+  border: 0px solid;
+}
+
 
 @media only screen and (max-width: 1200px) {
     /* For tablets: */
@@ -261,4 +329,43 @@ nav li:hover {
       width: 100%;
       position: static;
     }
+
+    .content {
+      margin-bottom: 50px;
+    }
+
+    nav {
+      height: 60px;
+    }
+
+    nav .fa {
+      font-size: 35px !important;
+    }
+
+    .counter {
+      width: 18px;
+      height: 18px;
+      right: 12px;
+      top: 37px;
+      font-size: 17px;
+    }
+
+    .menu {
+      position: fixed;
+      z-index: 5;
+      padding-top: 70px;
+    }
+    .move-up {
+      padding-top: 70px;
+    }
+
+    #button-text {
+      display: none;
+    }
+}
+
+footer {
+
+  height: 80px;
+  background-color: #404040;
 }
