@@ -11,10 +11,16 @@
   <body>
       <nav>
           <ul>
-            <li id="home-button"><span id="button-text">Home </span><i class="fa fa-home" style="font-size:26px;"></i></li>
+            <li id="home-button"><a href="index.html"><span id="button-text">Home </span><i class="fa fa-home" style="font-size:26px;"></i></a></li>
             <div class="right-buttons">
               <li id="menu-button"><span id="button-text">Menu</span> <i class="fa fa-bars phone"></i></li>
               <li id="icon"><i class="fa fa-shopping-bag"><div class="counter">0</div></i></li>
+              <span class="tooltip">1 item added to your shoppingcart</span>
+              <div class="cartoverview hide">
+                <h3>Shopping Cart</h3>
+                There are currently <span id="amount">0</span> item(s) in your shopping bag.
+                <button>Check out</button>
+              </div>
             </div>
           </ul>
     </nav>
@@ -24,7 +30,7 @@
         <div>
           <ul class="left">
             <li>Clothes</li>
-            <li>Men's clothes</li>
+            <li><a href="menClothes.html">Men's clothes</a></li>
             <li>Women's clothes</li>
           </ul>
         </div>
@@ -82,7 +88,7 @@
                   </div>
                 </div>
               </div>
-              <div class="addcart-button disabled">
+              <div class="addcart-button disabled size-addcart">
                 Add to cart <i class="fa fa-shopping-bag"></i>
               </div>
             </div>
@@ -143,9 +149,9 @@
     </div>
 
     <footer>
-
+        <p>Copyright &#9400;</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='js/main.js'></script>
+    <script src='js/main.js' type = "text/javascript"></script>
   </body>
 </html>
