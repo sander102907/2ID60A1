@@ -13,13 +13,21 @@
           <ul>
             <li id="home-button"><a href="index.html"><span id="button-text">Home </span><i class="fa fa-home" style="font-size:26px;"></i></a></li>
             <div class="right-buttons">
+              <li id="currency">&euro;<i class="material-icons currencyarrow">keyboard_arrow_down</i></li>
+              <span class="tooltip hide">Currency changed to </span>
+              <div class="currencyMenu hide">
+                <ul>
+                  <li id="dollar">&dollar;</li>
+                  <li id="pound">&pound;</li>
+                </ul>
+              </div>
               <li id="menu-button"><span id="button-text">Menu</span> <i class="fa fa-bars phone"></i></li>
               <li id="icon"><i class="fa fa-shopping-bag"><div class="counter">0</div></i></li>
-              <span class="tooltip">1 item added to your shoppingcart</span>
+              <div class="tooltip hide">1 item added to your shoppingcart</div>
               <div class="cartoverview hide">
                 <h3>Shopping Cart</h3>
                 There are currently <span id="amount">0</span> item(s) in your shopping bag.
-                <button>Check out</button>
+                <a href="shoppingCart.html"><button>Check out</button></a>
               </div>
             </div>
           </ul>
@@ -30,22 +38,22 @@
         <div>
           <ul class="left">
             <li>Clothes</li>
-            <li><a href="menClothes.html">Men's clothes</a></li>
-            <li>Women's clothes</li>
+            <a href="menClothes.html"><li>Men's clothes</li></a>
+            <a href="womenClothes.html"><li>Women's clothes</li></a>
           </ul>
         </div>
         <div>
           <ul class="left">
             <li>Shoes</li>
-            <li>Men's shoes</li>
-            <li>Women's shoes</li>
+            <a href="menShoes.html"><li>Men's shoes</li></a>
+            <a href="womanShoes.html"><li>Women's shoes</li></a>
           </ul>
         </div>
         <div>
           <ul class="right">
             <li>Contact</li>
-            <li>Facebook <i class="fa fa-facebook-square" style="color:white"></i></li>
-            <li>Instagram <i class="fa fa-instagram" style="color:white"></i></li>
+            <a href="https://www.facebook.com" target="_blank"><li>Facebook <i class="fa fa-facebook-square" style="color:white"></i></li></a>
+            <a href="https://www.instagram.com" target="_blank"><li>Instagram <i class="fa fa-instagram" style="color:white"></i></li></a>
           </ul>
         </div>
       </div>
@@ -57,10 +65,12 @@
           <div class="item">
             <a href="#">
             <div class="information">
-              <img class="product-image" src="Images/sneaker1.jpg" alt="Picture of sneaker">
-              <h2 id="name-product">Sneakers</h2>
+              <img class="product-image" src="Images/classica.jpg" alt="Picture of sneaker">
+              <h2 id="name-product">Classica</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">&euro;79.99</p>
+              <p>
+                <span class="currencysign">&euro;</span><span class="price">95.99</span>
+              </p>
             </div>
             </a>
             <div class="extra-info">
@@ -75,6 +85,8 @@
                   <div class="size-arrow"><i class="material-icons" style="font-size: 28px;">keyboard_arrow_down</i></div>
                   <div class="sizes hide">
                     <ul>
+                      <li>36 EU</li>
+                      <li>37 EU</li>
                       <li>38 EU</li>
                       <li>39 EU</li>
                       <li>40 EU</li>
@@ -84,6 +96,7 @@
                       <li>44 EU</li>
                       <li>45 EU</li>
                       <li>46 EU</li>
+                      <li>47 EU</li>
                     </ul>
                   </div>
                 </div>
@@ -96,10 +109,68 @@
           <div class="item">
             <a href="#">
             <div class="information">
+              <img class="product-image" src="Images/bordeauxsweater.jpg">
+              <h2 id="name-product">Bordeaux sweater</h2>
+              <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
+              <p>
+                <span class="currencysign">&euro;</span><span class="price">21.99</span>
+              </p>
+            </div>
+            </a>
+            <div class="extra-info">
+              <div class="border">
+                <p>size</p>
+              </div>
+              <div class="size-buttons">
+                <ul>
+                  <li>S</li>
+                  <li>M</li>
+                  <li>L</li>
+                  <li>XL</li>
+                </ul>
+              </div>
+              <div class="addcart-button disabled">
+                Add to cart <i class="fa fa-shopping-bag"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#">
+            <div class="information">
               <img class="product-image" src="Images/hoodie.jpeg">
               <h2 id="name-product">Sweater</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">&euro;24.99</p>
+              <p>
+                <span class="currencysign">&euro;</span><span class="price">24.99</span>
+              </p>
+            </div>
+            </a>
+            <div class="extra-info">
+              <div class="border">
+                <p>size</p>
+              </div>
+              <div class="size-buttons">
+                <ul>
+                  <li>S</li>
+                  <li>M</li>
+                  <li>L</li>
+                  <li>XL</li>
+                </ul>
+              </div>
+              <div class="addcart-button disabled">
+                Add to cart <i class="fa fa-shopping-bag"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#">
+            <div class="information">
+              <img class="product-image" src="Images/skjeans.jpg">
+              <h2 id="name-product">Stretchy Skinny Jeans</h2>
+              <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
+              <p>
+                <span class="currencysign">&euro;</span><span class="price">39.99</span>
+              </p>
             </div>
             </a>
             <div class="extra-info">
@@ -125,7 +196,9 @@
               <img class="product-image" src="Images/sweatpants.jpg">
               <h2 id="name-product">Sweatpants</h2>
               <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
-              <p id="price">&euro;34.99</p>
+              <p>
+                <span class="currencysign">&euro;</span><span class="price">34.99</span>
+              </p>
           </div>
           </a>
           <div class="extra-info">
@@ -141,6 +214,123 @@
               </ul>
             </div>
             <div class="addcart-button disabled">
+              Add to cart <i class="fa fa-shopping-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+          <div class="information">
+            <img class="product-image" src="Images/aroi.jpg" alt="Picture of sneaker">
+            <h2 id="name-product">Aroi</h2>
+            <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
+            <p>
+              <span class="currencysign">&euro;</span><span class="price">104.99</span>
+            </p>
+          </div>
+          </a>
+          <div class="extra-info">
+            <div class="border">
+              <p>size</p>
+            </div>
+            <div class="dropdown-size-container">
+              <div class="dropdown-size">
+                <div class="current-size">
+                  select size
+                </div>
+                <div class="size-arrow"><i class="material-icons" style="font-size: 28px;">keyboard_arrow_down</i></div>
+                <div class="sizes hide">
+                  <ul>
+                    <li>36 EU</li>
+                    <li>37 EU</li>
+                    <li>38 EU</li>
+                    <li>39 EU</li>
+                    <li>40 EU</li>
+                    <li>41 EU</li>
+                    <li>42 EU</li>
+                    <li>43 EU</li>
+                    <li>44 EU</li>
+                    <li>45 EU</li>
+                    <li>46 EU</li>
+                    <li>47 EU</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="addcart-button disabled size-addcart">
+              Add to cart <i class="fa fa-shopping-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+          <div class="information">
+            <img class="product-image" src="Images/hoodiedress.jpg">
+            <h2 id="name-product">Hoodie Dress</h2>
+            <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
+            <p>
+              <span class="currencysign">&euro;</span><span class="price">26.99</span>
+            </p>
+          </div>
+          </a>
+          <div class="extra-info">
+            <div class="border">
+              <p>size</p>
+            </div>
+            <div class="size-buttons">
+              <ul>
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+              </ul>
+            </div>
+            <div class="addcart-button disabled">
+              Add to cart <i class="fa fa-shopping-bag"></i>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#">
+          <div class="information">
+            <img class="product-image" src="Images/ultra.jpg" alt="Picture of sneaker">
+            <h2 id="name-product">Ultra 3.0</h2>
+            <i class="material-icons more-info" style="font-size:37px;">keyboard_arrow_right</i>
+            <p>
+              <span class="currencysign">&euro;</span><span class="price">75.99</span>
+            </p>
+          </div>
+          </a>
+          <div class="extra-info">
+            <div class="border">
+              <p>size</p>
+            </div>
+            <div class="dropdown-size-container">
+              <div class="dropdown-size">
+                <div class="current-size">
+                  select size
+                </div>
+                <div class="size-arrow"><i class="material-icons" style="font-size: 28px;">keyboard_arrow_down</i></div>
+                <div class="sizes hide">
+                  <ul>
+                    <li>36 EU</li>
+                    <li>37 EU</li>
+                    <li>38 EU</li>
+                    <li>39 EU</li>
+                    <li>40 EU</li>
+                    <li>41 EU</li>
+                    <li>42 EU</li>
+                    <li>43 EU</li>
+                    <li>44 EU</li>
+                    <li>45 EU</li>
+                    <li>46 EU</li>
+                    <li>47 EU</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="addcart-button disabled size-addcart">
               Add to cart <i class="fa fa-shopping-bag"></i>
             </div>
           </div>
