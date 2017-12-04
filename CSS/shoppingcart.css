@@ -110,12 +110,30 @@ i {
       padding-bottom: 20px;
     }
 
+    td:nth-child(n+1){
+      min-width: 100%;
+    }
+
+    td {
+      float: left;
+    }
+
+    table, td , tr {
+      border: none;
+      text-align: center;
+    }
+
+    tr {
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+    }
+
   .input {
     margin-left: 0px;
   }
 
   img.product-image {
-    height: 9%;
-    width: auto;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
   }
-}
