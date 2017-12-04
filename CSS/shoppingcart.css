@@ -4,13 +4,19 @@
   font-family: sans-serif;
 }
 
+.content {
+  min-height: calc(100vh- 80px);
+
+}
+
 .cartinventory {
   width: 90%;
-  height: 80%;
+  height: 100%;
   background-color: white;
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  padding-bottom: 40px;
 }
 
 h1 {
@@ -31,8 +37,9 @@ table {
 }
 
 td {
-  padding: 40px 5px 40px;
+  padding: 5px 10px 5px 0px;
   border-bottom: 1px solid #404040;
+  width: 25%;
 }
 
 th {
@@ -41,12 +48,27 @@ th {
   font-size: 20px;
 }
 
+img.product-image{
+  width: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  padding: 0;
+  margin-right: 0px;
+}
+
 .check-out {
   width: 90%;
   margin: 20px auto;
   background-color: black;
   height: 35px;
   cursor: pointer;
+}
+
+.input {
+  margin-left: 40px;
+}
+
+.name {
+  font-weight: bold;
 }
 
 i {
@@ -79,4 +101,12 @@ i {
   font-size: 24px;
   position: relative;
   top: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .cartinventory {
+      padding-bottom: 20px;
+    }
 }

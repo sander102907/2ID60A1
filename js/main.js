@@ -70,9 +70,9 @@ $(document).ready(() => {
     $('.menu').slideUp();
     $('#menu-button').removeClass('pressed');
     $('.content').removeClass('move-up');
-    $(event.currentTarget).find('.extra-info').slideUp();
+    $('.extra-info').slideUp();
     $('.more-info').removeClass('rotate');
-    $(event.currentTarget).find('.extra-info').find('li').removeClass('active');
+    $('.extra-info').find('li').removeClass('active');
     $('.addcart-button').addClass('disabled');
     $('.sizes').slideUp();
     $('.addcart-button').removeClass('sizes-on');
@@ -123,9 +123,61 @@ $(document).ready(() => {
     }
   })
 
-  sessionStorage.setItem('amount', items);
-  let amount = sessionStorage.getItem('amount');
-  console.log(amount);
+  shoppingCartCost();
+
+  function shoppingCartCost() {
+    let subTotal = 0;
+    $('.price').each(function(i, obj) {
+        subTotal += parseFloat($(obj).html());
+      });
+    $('#subTotal').html(subTotal.toFixed(2));
+    $('#delivery').html(4.99);
+    $('#total').html((parseFloat(subTotal) + parseFloat($('#delivery').html())).toFixed(2));
+  }
+
+  function shoppingCartCostUpdate() {
+    let subTotal = 0;
+    $('.price').each(function(i, obj) {
+      if (i < ($('.price').length-3)) {
+        subTotal += parseFloat($(obj).html());
+      }
+      });
+    $('#subTotal').html(subTotal.toFixed(2));
+    $('#delivery').html(4.99);
+    $('#total').html((parseFloat(subTotal) + parseFloat($('#delivery').html())).toFixed(2));
+  }
+
+  let prices = [];
+  $('.price').each(function(i, obj) {
+    if (i < ($('.price').length-3)) {
+      prices.push($(obj).html());
+    }
+  });
+
+  $("input").on("change paste keyup", function() {
+    if ($(this).hasClass("quantity0")) {
+        $(this).closest('tr').find(".price").html(($(this).val()*prices[0]).toFixed(2));
+    } else {
+      $(this).closest('tr').find(".price").html(($(this).val()*prices[1]).toFixed(2));
+    }
+    shoppingCartCostUpdate();
+});
+
+
+  function amountCost() {
+    $('.price').each(function(i, obj) {
+      if (i < ($('.price').length-3)) {
+        $('.price').html($('.price').html());
+      }
+    });
+  }
+
+  $('.fa-remove').on('click',function(e){
+         e.preventDefault();
+        $(this).parents('tr').remove();
+        shoppingCartCostUpdate();
+      });
+
 
   $('#currency').on('click' , () => {
     toggleCurrency();
