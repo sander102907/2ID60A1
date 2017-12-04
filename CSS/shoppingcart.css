@@ -109,4 +109,13 @@ i {
     .cartinventory {
       padding-bottom: 20px;
     }
+
+  .input {
+    margin-left: 0px;
+  }
+
+  img.product-image {
+    height: 9%;
+    width: auto;
+  }
 }

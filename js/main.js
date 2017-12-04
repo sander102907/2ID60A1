@@ -155,6 +155,9 @@ $(document).ready(() => {
   });
 
   $("input").on("change paste keyup", function() {
+    if ($(this).val() < 0 || $(this).val() > 20) {
+      $(this).val("1");
+    }
     if ($(this).hasClass("quantity0")) {
         $(this).closest('tr').find(".price").html(($(this).val()*prices[0]).toFixed(2));
     } else {
